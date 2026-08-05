@@ -1,7 +1,12 @@
 class Solution {
   int lengthOfLastWord(String s) {
-  List<String> splited = s.trim().split(' ');
-  String lastWord = splited[splited.length - 1];
-    return lastWord.length;
+    int count = 0;
+    String trimmedString = s.trim();
+    for(int i = trimmedString.length - 1 ; i >= 0 ; i--){
+        if(trimmedString[i] == ' ')break;
+        count++;
+    }
+    return count;
+  
   }
 }
