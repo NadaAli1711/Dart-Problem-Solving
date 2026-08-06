@@ -23,7 +23,7 @@ class Solution {
 
         }
     }
-    if(stack.isEmpty&& stackUsedFlag) return true;
+    if(stack.isEmpty && stackUsedFlag) return true;
     return false;
     
   }
