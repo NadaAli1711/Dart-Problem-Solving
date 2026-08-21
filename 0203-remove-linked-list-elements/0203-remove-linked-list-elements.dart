@@ -12,16 +12,14 @@ class Solution {
     dummy.next = head;
     ListNode prev = dummy;
 
-    while(head != null){
-        if(head.val == val){
-            prev.next = head.next;
-        }else{
-            prev = head;
-        }
-        head = head.next;
+    while (head != null) {
+      if (head.val == val) {
+        prev.next = head.next;
+      } else {
+        prev = head;
+      }
+      head = head.next;
     }
     return dummy.next;
-
-    
   }
 }
