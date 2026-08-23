@@ -12,9 +12,9 @@ class Solution {
     ListNode? fast = head;
 
     // dedicte the middle of linkedList
-    while (fast != null && fast.next != null) {
-      slow = slow!.next;
-      fast = fast.next!.next;
+    while(fast != null && fast.next != null){
+        slow = slow!.next;
+        fast = fast.next!.next;
     }
 
     //  deattach two halves
@@ -23,22 +23,23 @@ class Solution {
 
     // reverse second half
     ListNode? prev = null;
-    while (curr != null) {
-      ListNode? temp = curr.next;
-      curr.next = prev;
-      prev = curr;
-      curr = temp;
+    while(curr != null){
+        ListNode? temp = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = temp;
     }
 
     ListNode? first = null;
     ListNode? second = null;
-    while (head != null && prev != null) {
-      first = head.next;
-      head.next = prev;
-      second = prev.next;
-      prev.next = first;
-      head = first;
-      prev = second;
+    while(head != null && prev != null){
+        first = head.next;
+        head.next = prev;
+        second = prev.next;
+        prev.next = first;
+        head = first;
+        prev = second;
     }
+
   }
 }
