@@ -11,16 +11,14 @@ class Solution {
     ListNode dummy = ListNode(0);
     ListNode prev = dummy;
     dummy.next = head;
-    while(head != null && head.next != null ){
-        if(head.val == head.next?.val){
-            prev.next = head.next;
-        }else{
-            prev = head;
-        }
-        head = head.next;
-        
+    while (head != null && head.next != null) {
+      if (head.val == head.next?.val) {
+        prev.next = head.next;
+      } else {
+        prev = head;
+      }
+      head = head.next;
     }
     return dummy.next;
-    
   }
 }
