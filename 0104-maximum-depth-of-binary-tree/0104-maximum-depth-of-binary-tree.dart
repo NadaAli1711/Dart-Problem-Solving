@@ -9,9 +9,9 @@
  */
 class Solution {
   int maxDepth(TreeNode? root) {
-    if(root == null)return 0;
+    if (root == null) return 0;
     int maxLeft = maxDepth(root.left);
     int maxRight = maxDepth(root.right);
-    return 1+ (maxLeft > maxRight ? maxLeft : maxRight ); 
+    return 1 + (maxLeft > maxRight ? maxLeft : maxRight);
   }
 }
