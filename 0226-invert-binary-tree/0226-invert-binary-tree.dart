@@ -9,7 +9,7 @@
  */
 class Solution {
   TreeNode? invertTree(TreeNode? root) {
-    while(root == null) return null;
+    while (root == null) return null;
     TreeNode? temp = root.left;
     root.left = invertTree(root.right);
     root.right = invertTree(temp);
