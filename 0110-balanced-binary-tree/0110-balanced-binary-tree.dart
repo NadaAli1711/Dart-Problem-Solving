@@ -9,17 +9,17 @@
  */
 class Solution {
   bool isBalanced(TreeNode? root) {
-    if(root == null) return true;
+    if (root == null) return true;
     int leftHeight = getHeight(root.left);
     int rightHeight = getHeight(root.right);
     bool isCurrentBalanced = (leftHeight - rightHeight).abs() <= 1;
     return isCurrentBalanced && isBalanced(root.left) && isBalanced(root.right);
-    
   }
-  int getHeight(TreeNode? root){
-    if(root == null) return 0;
+
+  int getHeight(TreeNode? root) {
+    if (root == null) return 0;
     int leftPath = getHeight(root.left);
-    int rightPath = getHeight(root.right); 
+    int rightPath = getHeight(root.right);
     return 1 + (leftPath > rightPath ? leftPath : rightPath);
   }
 }
