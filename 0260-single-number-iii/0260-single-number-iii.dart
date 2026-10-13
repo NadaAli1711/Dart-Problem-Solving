@@ -1,0 +1,20 @@
+class Solution {
+  List<int> singleNumber(List<int> nums) {
+    int xor = 0;
+    for(int num in nums){
+        xor ^= num;
+    }
+    int diff = xor & (-xor);
+    int first = 0 ;
+    int second = 0 ;
+    for(int num in nums){
+        if(num & diff == 0){
+            first ^= num;
+        }else{
+            second ^= num;
+        }
+    }
+    return [first , second];
+    
+  }
+}
